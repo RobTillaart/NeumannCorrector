@@ -99,6 +99,26 @@ public:
     return value;
   }
 
+  uint16_t get16()
+  {
+    uint16_t value = _bits & 0xFFFF;
+    _bits >>= 16;
+    _count -= 16;
+    if (_count < 0)
+    {
+      _count = 0;
+    }
+    return value;
+  }
+
+  uint32_t get32()
+  {
+    uint32_t value = _bits;
+    _bits  = 0;
+    _count = 0;
+    return value;
+  }
+
 
 private:
   uint8_t  _size  = 32;
