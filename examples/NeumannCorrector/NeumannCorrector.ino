@@ -1,11 +1,10 @@
 //
 //    FILE: NeumannCorrector.ino
 //  AUTHOR: Rob Tillaart
-//    DATE: 2023-11-23
-// VERSION: 0.1.0
 // PURPOSE: Neumann corrector for random streams
 //     URL: https://github.com/RobTillaart/NeumannCorrector
 //     URL: https://github.com/RobTillaart/DEVRANDOM
+
 
 #include "NeumannCorrector.h"
 

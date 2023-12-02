@@ -27,7 +27,7 @@
 
 unittest_setup()
 {
-    fprintf(stderr, "NEUMANNCORRECTOR_LIB_VERSION: %s\n", (char *) NEUMANNCORRECTOR_LIB_VERSION);
+  fprintf(stderr, "NEUMANNCORRECTOR_LIB_VERSION: %s\n", (char *) NEUMANNCORRECTOR_LIB_VERSION);
 }
 
 
@@ -94,7 +94,7 @@ unittest(test_clear)
   }
   NC.clear();
   assertEqual(0, NC.available());
-  assertEqual(0, NC.get());
+  assertEqual(0, (int) NC.get());
 }
 
 
@@ -102,3 +102,4 @@ unittest_main()
 
 
 //  -- END OF FILE --
+

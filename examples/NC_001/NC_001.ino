@@ -1,11 +1,9 @@
 //    FILE: NC_001.ino
 //  AUTHOR: Rob Tillaart
-// VERSION: 0.1.0
-//    DATE: 2023-12-02
 // PURPOSE: pseudo random noise from analogWrite + Neumann Corrector
-//     URL:
+//     URL: https://github.com/RobTillaart/NeumannCorrector
 
-#include "Arduino.h"
+
 #include "NeumannCorrector.h"
 
 NeumannCorrector NC;
