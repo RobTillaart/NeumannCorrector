@@ -31,14 +31,15 @@ void loop()
 }
 
 
-uint32_t randomizer()
+//  timing of analogWrite (on AVR) seems not fully deterministic.
+//  so use it to harvest some pseudo random bits.
+uint8_t randomizer()
 {
-  uint32_t value = 0;
+  uint8_t value = 0;
   for (int i = 0; i < 8; i++)
   {
     uint32_t start = micros();
-    // analogWrite(9, micros());
-    analogRead(A0);
+    analogWrite(9, micros());
     uint32_t stop = micros();
     Serial.println(stop - start);
     value <<= 1;

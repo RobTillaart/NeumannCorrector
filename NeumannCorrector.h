@@ -80,7 +80,7 @@ public:
         }
       }
     }
-    if (_count > 32) 
+    if (_count > 32)
     {
       _count = 32;
     }

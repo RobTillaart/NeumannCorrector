@@ -40,7 +40,61 @@ unittest(test_constructor)
 {
   NeumannCorrector NC;
 
-  assertEqual(32, NC.getSize());
+  assertEqual(32, NC.size());
+}
+
+
+unittest(test_add)
+{
+  NeumannCorrector NC;
+  for (int i = 0; i < 256; i++)
+  {
+    NC.add(i);
+    if (NC.available())
+    {
+      Serial.print(i);
+      Serial.print("\t");
+      Serial.println(NC.get());
+    }
+  }
+  assertEqual(32, NC.size());
+}
+
+
+unittest(test_get)
+{
+  NeumannCorrector NC;
+
+  for (int i = 0; i < 256; i++)
+  {
+    NC.add(i);
+  }
+  for (int i = 0; i < 5; i++)
+  {
+    NC.get();
+  }
+  assertEqual(0, NC.available());
+
+  for (int i = 0; i < 256; i++)
+  {
+    NC.add(i);
+  }
+  NC.clear();
+  assertEqual(0, NC.available());
+}
+
+
+unittest(test_clear)
+{
+  NeumannCorrector NC;
+
+  for (int i = 0; i < 256; i++)
+  {
+    NC.add(i);
+  }
+  NC.clear();
+  assertEqual(0, NC.available());
+  assertEqual(0, NC.get());
 }
 
 
