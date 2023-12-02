@@ -23,12 +23,13 @@ class NeumannCorrector
 public:
   explicit NeumannCorrector()
   {
-    _count = 0;
+    clear();
   }
 
   void clear()
   {
     _count = 0;
+    _bits = 0;
   }
 
   uint8_t available()
@@ -102,7 +103,7 @@ public:
 private:
   uint8_t  _size  = 32;
   int      _count = 0;
-  uint32_t _bits  = 0x0000;
+  uint32_t _bits  = 0;
 };
 
 

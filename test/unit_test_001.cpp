@@ -94,7 +94,7 @@ unittest(test_clear)
   }
   NC.clear();
   assertEqual(0, NC.available());
-  assertEqual(0, (int) NC.get());
+  assertEqual(0, NC.get());
 }
 
 
